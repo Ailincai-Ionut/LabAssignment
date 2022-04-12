@@ -3,7 +3,7 @@
 #include <ostream>
 #include "Offer.h"
 using namespace std;
-//lol
+//lol ionut sal palnkacjbdschbavc,adkcs
 //hello 
 typedef Offer ElementType;
 
