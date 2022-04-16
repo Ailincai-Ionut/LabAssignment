@@ -1,5 +1,5 @@
 #include "FilteringCriteria.h"
 
-DynamicArray FilteringCriteria::filter(DynamicArray &da) {
-    return DynamicArray();
+DynamicArray<Offer> FilteringCriteria::filter(DynamicArray<Offer> &da) {
+  return DynamicArray<Offer>();
 }
