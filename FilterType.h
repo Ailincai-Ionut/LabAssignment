@@ -4,7 +4,7 @@
 #include "FilteringCriteria.h"
 #include <iostream>
 
-class FilterType : FilteringCriteria {
+class FilterType : public FilteringCriteria {
   std::string type;
 
 public:

@@ -5,7 +5,7 @@
 #include "DynamicArray.h"
 #include "FilterPrice.h"
 #include "FilterType.h"
-#include "FilteringCriteriaTypeAndPrice.h"
+#include "FilteringCriteriaAnd.h"
 #include "Offer.h"
 
 #include <iostream>
@@ -105,7 +105,9 @@ void displayMenu() {
       string type;
       cout << "Type: ";
       cin >> type;
-      FilteringCriteriaTypeAndPrice ftp(type, price);
+      FilteringCriteria *fp = new FilterPrice(price);
+      FilteringCriteria *ft = new FilterType(type);
+      FilteringCriteriaAnd ftp(ft, fp);
       DynamicArray<Offer> da1 = ftp.filter(da);
       cout << da1;
     } else if (answer == 'Q' || answer == 'q') {

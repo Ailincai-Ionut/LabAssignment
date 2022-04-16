@@ -1,4 +1,4 @@
-OBJS	= Date.o Offer.o OfferTest.o DynamicArray.o DynamicArrayTest.o FilteringCriteria.o FilteringTest.o FilterPrice.o FilterType.o FilteringCriteriaTypeAndPrice.o main.o
+OBJS	= Date.o Offer.o OfferTest.o DynamicArray.o DynamicArrayTest.o FilteringCriteria.o FilteringTest.o FilterPrice.o FilterType.o FilteringCriteriaAnd.o main.o
 OUT	= main
 CC	 = g++
 FLAGS	 = -g -c -Wall
@@ -35,8 +35,8 @@ FilterType.o:FilterType.cpp
 FilterPrice.o:FilterPrice.cpp
 	$(CC) $(FLAGS) FilterPrice.cpp
 
-FilteringCriteriaTypeAndPrice.o:FilteringCriteriaTypeAndPrice.cpp
-	$(CC) $(FLAGS) FilteringCriteriaTypeAndPrice.cpp
+FilteringCriteriaAnd.o:FilteringCriteriaAnd.cpp
+	$(CC) $(FLAGS) FilteringCriteriaAnd.cpp
 
 main.o: main.cpp
 	$(CC) $(FLAGS) main.cpp

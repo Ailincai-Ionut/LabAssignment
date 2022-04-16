@@ -3,7 +3,7 @@
 #include "DynamicArray.h"
 #include "FilterPrice.h"
 #include "FilterType.h"
-#include "FilteringCriteriaTypeAndPrice.h"
+#include "FilteringCriteriaAnd.h"
 #include "FilteringTest.h"
 
 int FilteringTest::test_filterPrice() {
@@ -84,7 +84,9 @@ int FilteringTest::test_filterPriceAndType() {
   Date date4(4, 4, 2022);
   Offer offer4("4", "dep4", "dest4", "circuit", 4000, date4);
   daOffers.append(offer4);
-  FilteringCriteriaTypeAndPrice filter("circuit", 5000);
+  FilteringCriteria *ft = new FilterType("circuit");
+  FilteringCriteria *fp = new FilterPrice(5000);
+  FilteringCriteriaAnd filter(ft, fp);
   DynamicArray<Offer> fil = filter.filter(daOffers);
 
   assert(fil.getLength() == 2);
